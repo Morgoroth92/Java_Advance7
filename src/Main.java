@@ -1,9 +1,10 @@
 import java.util.HashSet;
-import java.util.Set;
+
 
 public class Main {
     public static void main(String[] args) {
-        createHashSet(10);
+        HashSet demoHashSet = createHashSet(10);
+        leggiHashSet(demoHashSet);
     }
     public static HashSet createHashSet(int size){
         HashSet<Integer> set = new HashSet<>();
@@ -11,10 +12,12 @@ public class Main {
         for (int i = 0; i < size; i++){
             set.add(aggiungere);
             aggiungere++;
-        }
-        System.out.println(set.size());
-        for (int show : set){
-            System.out.println(show);
         } return set;
+    }
+    public static void leggiHashSet(HashSet<Integer> set) {
+        for (int i : set) {
+            System.out.println(i);
+        }
+        System.out.println("L'HashSet contine : " + set.size() + " elementi");
     }
 }
